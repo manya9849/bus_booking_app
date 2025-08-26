@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bus Booking - Home</title>
+</head>
+<body>
+    <h1>Welcome to Bus Booking</h1>
+    <h2>Available Buses</h2>
+    <ul>
+        {% for bus in buses %}
+        <li>
+            {{ bus.from }} → {{ bus.to }} at {{ bus.time }} | ₹{{ bus.price }}
+            <a href="{{ url_for('select', bus_id=bus.id) }}">Book</a>
+        </li>
+        {% endfor %}
+    </ul>
+    <br>
+    <a href="{{ url_for('login') }}">Logout</a>
+</body>
+</html>

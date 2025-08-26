@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Booking Confirmation</title>
+</head>
+<body>
+    <h1>Booking Confirmed!</h1>
+    <p><strong>Name:</strong> {{ booking.name }}</p>
+    <p><strong>Age:</strong> {{ booking.age }}</p>
+    <p><strong>Seat:</strong> {{ booking.seat }}</p>
+    <p><strong>Bus:</strong> {{ booking.bus.from }} → {{ booking.bus.to }} at {{ booking.bus.time }}</p>
+    <p><strong>Price:</strong> ₹{{ booking.bus.price }}</p>
+    <br>
+    <a href="{{ url_for('home') }}">Back to Home</a>
+</body>
+</html>
